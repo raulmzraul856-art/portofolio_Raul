@@ -1,0 +1,226 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0e0f13;
+    color: #fff;
+}
+
+/* NAVBAR */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00eaff;
+}
+
+/* HOME */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 50px;
+}
+
+.text {
+    max-width: 500px;
+}
+
+.text h2 {
+    font-size: 45px;
+}
+
+/* INITIAL BOX */
+.initial-box {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    background: #14161c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 3s infinite ease-in-out;
+    border: 2px solid #00eaff;
+}
+
+.initial {
+    font-size: 140px;
+    font-weight: 600;
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #00eaff;
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00b3c6;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* ABOUT, PROJECTS */
+.about, .projects, .contact {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #ccc;
+}
+
+/* PROJECT CARDS */
+.project-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1c22;
+    padding: 25px;
+    width: 260px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 18px #00eaff;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* CONTACT */
+.contact a {
+    color: #00eaff;
+    text-decoration: none;
+}
+
+/* ANIMASI MASUK */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 1s forwards ease-out;
+}
+
+.fade-left {
+    opacity: 0;
+    animation: fadeLeft 1s forwards ease-out;
+}
+
+.fade-right {
+    opacity: 0;
+    animation: fadeRight 1s forwards ease-out;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* FOOTER */
+.footer {
+    background: #0c0d11;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 2px solid #00eaff;
+    box-shadow: 0 -5px 25px rgba(0, 234, 255, 0.1);
+    animation: fadeUp 1.2s ease-out;
+}
+
+.footer p {
+    color: #aaa;
+    margin-bottom: 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #00eaff;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    text-shadow: 0 0 10px #00eaff;
+    color: #fff;
+}
+
